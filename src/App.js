@@ -1,12 +1,14 @@
 
 import './App.css';
+import ItemList from './components/ItemListContainer';
 import NavBar from './components/NavBar'
 
 function App() {
   return (
     
     <div className="App">
-<NavBar/>
+    <NavBar/>
+    <ItemList></ItemList>
       <header className="App-header">
        <h1>Retro Game Store</h1>
        

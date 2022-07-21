@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import CartWidget from '../CartWidget';
 
 const pages = ['Inicio','Contacto', 'Productos'];
 
@@ -73,6 +74,9 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+              <CartWidget/>
           </Box>          
         </Toolbar>
       </Container>
