@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount';
 const ItemList = (greating) => {
     return (
         <Box>
-            <ItemCount/>             
+            <ItemCount stock ={"3"}/>             
         </Box>
     );
     }
