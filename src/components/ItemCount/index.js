@@ -4,18 +4,21 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import './ItemCount.scss'
 
-const ItemCount = (greating) => {
-const [stock,setStock] = useState(0);
+const ItemCount = ({stock}) => {
+const [unidades,setUnidades] = useState(0);
 const handleMinus = () => 
 {
-    if(stock > 0)
+    if(unidades > 0)
     {
-        setStock(stock-1);
+        setUnidades(unidades-1);
     }
 }
 const handlePlus = () => 
 {
-    setStock(stock+1);
+    if(unidades < stock )
+    {
+        setUnidades(unidades+1);
+    }
     
 }
     return (
@@ -23,7 +26,7 @@ const handlePlus = () =>
             <IconButton onClick={handleMinus} className='boton' color="primary" aria-label="upload picture" component="label">        
                 <RemoveIcon />
             </IconButton>
-            <label>{stock}</label>            
+            <label>{unidades}</label>            
             <IconButton onClick={handlePlus} className='boton' color="primary" aria-label="upload picture" component="label">        
                 <AddIcon />
             </IconButton>
